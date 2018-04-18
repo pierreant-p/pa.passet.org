@@ -1,0 +1,135 @@
+@keyframes slideInFromTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.container .grid-left  { float: left; margin: 0 2%; width: 30%; }
+.container .grid-right  { float: left; margin: 0 2%; width: 60%; animation: 0.3s ease-out 0.5s 1 slideInFromRight forwards; opacity: 0;}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2em;
+    font-weight: 300;
+    color: #222222;
+    padding: 0;
+    margin: 0;
+    background-color: #fdfdfd;
+}
+
+a {
+    color: #222222;
+    border-bottom: 1px dotted #bbbbbb;
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 0;
+}
+
+.picture img {
+    width: 120px;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+    animation: 0.3s ease-out 0.5s 1 slideInFromTop forwards; opacity: 0;
+}
+
+.welcome {
+    padding: 20px 0;
+    font-size: 1.05em;
+    font-style: italic;
+    font-weight: 300;
+    text-align: center;
+    animation: 0.3s ease-out 0.5s 1 slideInFromTop forwards; opacity: 0;
+}
+
+.welcome .name {
+    display: inline-block;
+    font-weight: 400;
+}
+
+.welcome:after {
+    content: "";
+    display: block;
+    width: 100px;
+    margin: 30px auto -5px auto;
+    border-bottom: 3px solid #1caad9;
+}
+
+.content {
+    padding: 25px;
+}
+
+.bio {
+    flex: 1;
+}
+
+.bio p {
+    font-size: .9em;
+    line-height: 1.2em;
+    margin: 15px 0;
+    text-align: justify;
+    animation: 0.3s ease-out 0.5s 1 slideInFromBottom forwards; opacity: 0;
+}
+
+.links {
+    list-style-type: none;
+    text-align: center;
+    animation: 0.3s ease-out 0.5s 1 slideInFromBottom forwards; opacity: 0;
+}
+
+.links li {
+    display: inline-block;
+    padding: 0 5px;
+    font-size: .7em;
+}
+
+.social {
+    display: block;
+    border: none;
+}
+
+.social svg {
+    height: 30px;
+    width: 30px;
+    fill: #999999;
+    transition: 150ms;
+    transition-timing-function: ease-in-out;
+}
+
+.social:hover svg {
+    fill: #444444;
+}
+
+.social.sketchfab svg {
+    height: 28px;
+    position: relative;
+    top: -1px;
+}
