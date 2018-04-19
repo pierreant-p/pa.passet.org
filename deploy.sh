@@ -6,4 +6,4 @@ aws s3 sync \
     --exclude ".git/*" \
     --exclude .DS_Store \
     . \
-    s3://passet-org-pa/
+    s3://pa.passet.org/
